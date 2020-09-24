@@ -94,7 +94,7 @@ public class DialogManager : MonoBehaviour
             else
             {
                 NPCtalking.text = "Hello";
-                choice1.GetComponentInChildren<Text>().text = "I banged ur mom";
+                choice1.GetComponentInChildren<Text>().text = "Test Dialogue";
                 choice4.gameObject.SetActive(true);
             }
         }
