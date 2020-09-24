@@ -7,6 +7,7 @@ public class PlayerControls : MonoBehaviour
 {
     private int mood;
     private bool infected;
+    private string happiness;
     public Text displayMood;
 
     public int Mood
@@ -32,6 +33,30 @@ public class PlayerControls : MonoBehaviour
         set { infected = value; }
     }
 
+    private string Happiness
+    {
+        get { return happiness; }
+        set
+        {
+            if (mood > 8)
+            {
+                happiness = "happy";
+            }
+            else if (mood > 6)
+            {
+                happiness = "neutral";
+            }
+            else if (mood > 4)
+            {
+                happiness = "unhappy";
+            }
+            else
+            {
+                happiness = "angry";
+            }
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +67,6 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        displayMood.text = "Mood: " + Mood;
+        displayMood.text = "Mood: " + mood + " " + happiness;
     }
 }
