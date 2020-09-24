@@ -44,3 +44,4 @@ public class PlayerControls : MonoBehaviour
     {
         displayMood.text = "Mood: " + mood;
     }
+}
