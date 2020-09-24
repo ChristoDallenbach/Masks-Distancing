@@ -94,7 +94,7 @@ public class DialogManager : MonoBehaviour
             else
             {
                 NPCtalking.text = "Hello";
-                choice1.GetComponentInChildren<Text>().text = "Hello";
+                choice1.GetComponentInChildren<Text>().text = "I banged ur mom";
                 choice4.gameObject.SetActive(true);
             }
         }
@@ -106,12 +106,12 @@ public class DialogManager : MonoBehaviour
         if (npcManagerScript.getKindness() < 3)
         {
             NPCtalking.text = "RWWWAAAAARRR AWFUL";
-            playerScript.setMood(-1);
+            playerScript.Mood = -1;
         }
         else
         {
             NPCtalking.text = "Have a nice day";
-            playerScript.setMood(1);
+            playerScript.Mood = 1;
         }
         choice1.gameObject.SetActive(false);
         choice2.gameObject.SetActive(false);
@@ -125,12 +125,12 @@ public class DialogManager : MonoBehaviour
         if (npcManagerScript.getKindness() < 3)
         {
             NPCtalking.text = "RWWWAAARRR NO";
-            playerScript.setMood(-1);
+            playerScript.Mood = -1;
         }
         else
         {
             NPCtalking.text = "Sure";
-            playerScript.setMood(1);
+            playerScript.Mood = 1;
         }
         choice1.gameObject.SetActive(false);
         choice2.gameObject.SetActive(false);
@@ -142,7 +142,7 @@ public class DialogManager : MonoBehaviour
     {
         saidHello = true;
         NPCtalking.text = "RWAAAR AWFUL";
-        playerScript.setMood(-1);
+        playerScript.Mood = -1;
         choice1.gameObject.SetActive(false);
         choice2.gameObject.SetActive(false);
         choice3.gameObject.SetActive(false);
@@ -153,7 +153,7 @@ public class DialogManager : MonoBehaviour
     {
         saidHello = true;
         NPCtalking.text = "Have a nice day";
-        playerScript.setMood(1);
+        playerScript.Mood = 1;
         choice1.gameObject.SetActive(false);
         choice2.gameObject.SetActive(false);
         choice3.gameObject.SetActive(false);

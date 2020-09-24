@@ -8,6 +8,30 @@ public class PlayerControls : MonoBehaviour
     private int mood;
     private bool infected;
     public Text displayMood;
+
+    public int Mood
+    {
+        get { return mood; }
+        set
+        {
+            mood += value;
+            if (mood > 10)
+            {
+                mood = 10;
+            }
+            if (mood < 0)
+            {
+                mood = 0;
+            }
+        }
+    }
+
+    public bool Infected
+    {
+        get { return infected; }
+        set { infected = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,32 +44,3 @@ public class PlayerControls : MonoBehaviour
     {
         displayMood.text = "Mood: " + mood;
     }
-
-    public void setMood(int moodChange)
-    {
-        mood += moodChange;
-        if (mood > 10)
-        {
-            mood = 10;
-        }
-        if (mood < 0)
-        {
-            mood = 0;
-        }
-    }
-
-    public void Infected()
-    {
-        infected = true;
-    }
-
-    public int getMood()
-    {
-        return mood;
-    }
-
-    public bool getInfected()
-    {
-        return infected;
-    }
-}
