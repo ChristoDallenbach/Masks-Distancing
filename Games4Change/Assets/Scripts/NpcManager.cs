@@ -5,6 +5,7 @@ using UnityEngine;
 public class NpcManager : MonoBehaviour
 {
     public GameObject customer;
+    private GameObject customerClone;
     public GameObject dialog;
     private DialogManager dialogScript;
     private float tempTime = 0.0f;//This is just until scanning is done, don't knw how to check yet
@@ -12,16 +13,28 @@ public class NpcManager : MonoBehaviour
     private float timeUntilC = 5.0f;
     private bool customerPresent;
     //these are npc stuff
-    private int responsability; //chances of wearing a mask
+    private int responsibility; //chances of wearing a mask
     private int kindness; //chances on being rude about puting the mask on
+
+    public int Responsibility
+    {
+        get { return responsibility; }
+        set { responsibility = value; }
+    }
+
+    public int Kindness
+    {
+        get { return kindness; }
+        set { kindness = value; }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         dialogScript = dialog.GetComponent<DialogManager>();
         customerPresent = false;
-        responsability = 0;
-        kindness = 0;
+        Responsibility = 0;
+        Kindness = 0;
     }
 
     // Update is called once per frame
@@ -45,8 +58,8 @@ public class NpcManager : MonoBehaviour
         if (Timer > timeUntilC && customerPresent == false)
         {
             customerPresent = true;
-            responsability = (int)UnityEngine.Random.Range(0, 5);
-            kindness = (int)UnityEngine.Random.Range(0, 5);
+            Responsibility = (int)UnityEngine.Random.Range(0, 5);
+            Kindness = (int)UnityEngine.Random.Range(0, 5);
             SpawnCustomer();
         }
     }
@@ -60,20 +73,11 @@ public class NpcManager : MonoBehaviour
     {
         customerPresent = false;
         Timer = 0f;
+        Destroy(customerClone);
     }
 
     private void SpawnCustomer()
     {
-        Instantiate(customer, new Vector3(0, 0, 0), Quaternion.identity);
-    }
-
-    public int getKindness()
-    {
-        return kindness;
-    }
-
-    public int getRespnse()
-    {
-        return responsability;
+        customerClone = Instantiate(customer, new Vector3(0, 0, 0), Quaternion.identity);
     }
 }

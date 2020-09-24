@@ -42,5 +42,6 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        displayMood.text = "Mood: " + mood;
+        displayMood.text = "Mood: " + Mood;
     }
+}

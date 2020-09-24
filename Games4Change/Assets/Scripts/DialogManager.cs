@@ -53,6 +53,7 @@ public class DialogManager : MonoBehaviour
         else
         {
             NPCtalking.gameObject.SetActive(false);
+
             choice1.gameObject.SetActive(false);
             choice2.gameObject.SetActive(false);
             choice3.gameObject.SetActive(false);
@@ -71,9 +72,9 @@ public class DialogManager : MonoBehaviour
         NPCtalking.gameObject.SetActive(true);
         choice1.gameObject.SetActive(true);
 
-        if (npcManagerScript.getKindness() < 3)
+        if (npcManagerScript.Kindness < 3)
         {
-            if (npcManagerScript.getRespnse() < 3)
+            if (npcManagerScript.Responsibility < 3)
             {
                 NPCtalking.text = "RWAR MASK BAD";
                 choice2.gameObject.SetActive(true);
@@ -86,7 +87,7 @@ public class DialogManager : MonoBehaviour
         }
         else
         {
-            if (npcManagerScript.getRespnse() < 3)
+            if (npcManagerScript.Responsibility < 3)
             {
                 NPCtalking.text = "Hello";
                 choice2.gameObject.SetActive(true);
@@ -103,7 +104,7 @@ public class DialogManager : MonoBehaviour
     private void first()//this is the response if they are not wearing and you say nothing or they are wearing a mask and is not rude
     {
         saidHello = true;
-        if (npcManagerScript.getKindness() < 3)
+        if (npcManagerScript.Kindness < 3)
         {
             NPCtalking.text = "RWWWAAAAARRR AWFUL";
             playerScript.Mood = -1;
@@ -122,7 +123,7 @@ public class DialogManager : MonoBehaviour
     private void second()//this response is if they are not wearing a mask you say something
     {
         saidHello = true;
-        if (npcManagerScript.getKindness() < 3)
+        if (npcManagerScript.Kindness < 3)
         {
             NPCtalking.text = "RWWWAAARRR NO";
             playerScript.Mood = -1;
