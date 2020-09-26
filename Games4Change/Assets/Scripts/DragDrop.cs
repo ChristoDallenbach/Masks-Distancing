@@ -39,7 +39,15 @@ public class DragDrop : MonoBehaviour
 
         if (draggingItem)
         {
-            draggedObject.transform.position = inputPosition + touchOffset;
+            //get rid of null references when dragged object is destroyed
+            if (draggedObject != null)
+            {
+                //don't want scanner and the register to be draggable
+                if (draggedObject.name != "Scanner" && draggedObject.name != "Register")
+                {
+                    draggedObject.transform.position = inputPosition + touchOffset;
+                }
+            }
         }
         else
         {
