@@ -2,13 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
+enum E_Mood { Happy = 0, Neutral = 1, Unhappy = 2, Angry = 3}
 
 public class PlayerControls : MonoBehaviour
 {
     private int mood;
     private bool infected;
-    private string happiness;
-    public Text displayMood;
+    private E_Mood happiness;
+    [SerializeField]
+    private TextMeshProUGUI displayMood;
+    [SerializeField]
+    private Sprite[] moodImages;
+    [SerializeField]
+    private Image moodImage;
 
     public int Mood
     {
@@ -24,6 +32,7 @@ public class PlayerControls : MonoBehaviour
             {
                 mood = 0;
             }
+            UpdateUI();
         }
     }
 
@@ -33,27 +42,28 @@ public class PlayerControls : MonoBehaviour
         set { infected = value; }
     }
 
-    private string Happiness
+    private E_Mood Happiness
     {
         get { return happiness; }
         set
         {
             if (mood > 8)
             {
-                happiness = "happy";
+                happiness = E_Mood.Happy;
             }
             else if (mood > 6)
             {
-                happiness = "neutral";
+                happiness = E_Mood.Neutral;
             }
             else if (mood > 4)
             {
-                happiness = "unhappy";
+                happiness = E_Mood.Unhappy;
             }
             else
             {
-                happiness = "angry";
+                happiness = E_Mood.Angry;
             }
+            UpdateUI();
         }
     }
 
@@ -62,12 +72,18 @@ public class PlayerControls : MonoBehaviour
     {
         mood = 10;
         infected = false;
+        UpdateUI();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Happiness = "";
+        
+    }
+
+    public void UpdateUI() 
+    {
+        moodImage.sprite = moodImages[(int)happiness];
         displayMood.text = "Mood: " + mood + " " + happiness;
     }
 }

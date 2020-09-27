@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogManager : MonoBehaviour
 {
-    public Text NPCtalking;
+    public TextMeshProUGUI NPCtalking;
     public Button choice1;
     public Button choice2;
     public Button choice3;
@@ -25,10 +26,10 @@ public class DialogManager : MonoBehaviour
         choice2.onClick.AddListener(second);
         choice3.onClick.AddListener(third);
         choice4.onClick.AddListener(fourth);
-        choice1.GetComponentInChildren<Text>().text = "Hello";
-        choice2.GetComponentInChildren<Text>().text = "Plese put mask on";
-        choice3.GetComponentInChildren<Text>().text = "Sorry you are suffering";
-        choice4.GetComponentInChildren<Text>().text = "Thank you for wearing a mask";
+        choice1.GetComponentInChildren<TextMeshProUGUI>().text = "Hello";
+        choice2.GetComponentInChildren<TextMeshProUGUI>().text = "Plese put mask on";
+        choice3.GetComponentInChildren<TextMeshProUGUI>().text = "Sorry you are suffering";
+        choice4.GetComponentInChildren<TextMeshProUGUI>().text = "Thank you for wearing a mask";
         NPCtalking.gameObject.SetActive(false);
         choice1.gameObject.SetActive(false);
         choice2.gameObject.SetActive(false);
