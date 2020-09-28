@@ -40,19 +40,19 @@ public class NpcManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CustomerTimer();
-        if (dialogScript.DoneTalking)
+        customerTimer();
+        if (dialogScript.getSaidHello() == true)
         {
             tempTime += Time.deltaTime;
             if (tempTime > timeUntilC)
             {
-                SetCustomerleave();
+                setCustomerleave();
                 tempTime = 0;
             }
         }
     }
 
-    void CustomerTimer()
+    void customerTimer()
     {
         Timer += Time.deltaTime;
         if (Timer > timeUntilC && customerPresent == false)
@@ -64,12 +64,12 @@ public class NpcManager : MonoBehaviour
         }
     }
 
-    public bool GetCustomer()
+    public bool getCustomer()
     {
         return customerPresent;
     }
 
-    public void SetCustomerleave()
+    public void setCustomerleave()
     {
         customerPresent = false;
         Timer = 0f;
