@@ -8,6 +8,8 @@ public class NpcManager : MonoBehaviour
     public GameObject customer;
     private GameObject customerClone;
     public GameObject dialog;
+    public GameObject[] maskNPC;
+    public GameObject[] noMaskNPC;
     private DialogManager dialogScript;
     private int numCustomerInADay;// the number of costemers the player will see through the entire day
     private int CustomerNum;//the number of custemers the player has seen
@@ -102,6 +104,15 @@ public class NpcManager : MonoBehaviour
     private void SpawnCustomer()
     {
         CustomerNum++;
-        customerClone = Instantiate(customer, new Vector3(-1.4f, .62f, 0f), Quaternion.identity);
+        int ima = (int)UnityEngine.Random.Range(0, 5);
+        if (responsibility < 3)
+        {
+            customerClone = Instantiate(noMaskNPC[ima], new Vector3(-1.63f, 1.21f, 0f), Quaternion.identity);
+        }
+        else
+        {
+            customerClone = Instantiate(maskNPC[ima], new Vector3(-1.63f, 1.21f, 0f), Quaternion.identity);
+        }
+        //customerClone = Instantiate(customer, new Vector3(-1.4f, .62f, 0f), Quaternion.identity);
     }
 }
