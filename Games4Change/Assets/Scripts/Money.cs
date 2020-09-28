@@ -18,7 +18,7 @@ public class Money : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         //remove the money once entering the register  
-        if (other.name == "Register")
+        if (other.name == "CashRegister")
         {
             Debug.Log("Cha-ching"); //replace with sound
             Destroy(this.gameObject);
