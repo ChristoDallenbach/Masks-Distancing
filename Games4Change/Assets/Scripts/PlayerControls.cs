@@ -9,7 +9,6 @@ enum E_Mood { Happy = 0, Neutral = 1, Unhappy = 2, Angry = 3}
 public class PlayerControls : MonoBehaviour
 {
     private int mood;
-    private bool infected;
     private E_Mood happiness;
     [SerializeField]
     private TextMeshProUGUI displayMood;
@@ -36,11 +35,6 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
-    public bool Infected
-    {
-        get { return infected; }
-        set { infected = value; }
-    }
 
     private E_Mood Happiness
     {
@@ -71,7 +65,7 @@ public class PlayerControls : MonoBehaviour
     void Start()
     {
         mood = 10;
-        infected = false;
+        Days.infected = false;
         UpdateUI();
     }
 

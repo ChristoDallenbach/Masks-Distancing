@@ -8,6 +8,7 @@ using TMPro;
 public class DialogManager : MonoBehaviour
 {
     public TextMeshProUGUI NPCtalking;
+    public TextMeshProUGUI dayAtWork;
     public Button choice1;
     public Button choice2;
     public Button choice3;
@@ -43,7 +44,7 @@ public class DialogManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        dayAtWork.text = "Days at work: " + Days.day;
         if (npcManagerScript.getCustomer() == true)
         {
             if (saidHello == false)
@@ -96,7 +97,7 @@ public class DialogManager : MonoBehaviour
             else
             {
                 NPCtalking.text = "Hello";
-                choice1.GetComponentInChildren<Text>().text = "Test Dialogue";
+                //choice1.GetComponentInChildren<Text>().text = "Test Dialogue";
                 choice4.gameObject.SetActive(true);
             }
         }
