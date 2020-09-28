@@ -7,11 +7,7 @@ using TMPro;
 
 public class DialogManager : MonoBehaviour
 {
-<<<<<<< HEAD
     //Fields
-=======
-    public TextMeshProUGUI dayAtWork;
->>>>>>> 946d72e499c171fcb3c2bca7867cc2ab9baf1fe3
     public TextMeshProUGUI NPCtalking;
     public Button choice1;
     public Button choice2;
@@ -108,13 +104,8 @@ public class DialogManager : MonoBehaviour
 
     void Update()
     {
-<<<<<<< HEAD
         //checks to see if there is a customer
         if (npcManagerScript.GetCustomer())
-=======
-        dayAtWork.text = "Days at work: " + Days.day;
-        if (npcManagerScript.getCustomer() == true)
->>>>>>> 946d72e499c171fcb3c2bca7867cc2ab9baf1fe3
         {
             if (!doneTalking)
             {
@@ -161,21 +152,7 @@ public class DialogManager : MonoBehaviour
         }
         else
         {
-<<<<<<< HEAD
             helloButton.gameObject.SetActive(false);
-=======
-            if (npcManagerScript.Responsibility < 3)
-            {
-                NPCtalking.text = "Hello";
-                choice2.gameObject.SetActive(true);
-            }
-            else
-            {
-                NPCtalking.text = "Hello";
-                //choice1.GetComponentInChildren<Text>().text = "Test Dialogue";
-                choice4.gameObject.SetActive(true);
-            }
->>>>>>> 946d72e499c171fcb3c2bca7867cc2ab9baf1fe3
         }
 
         //determines the personality of the NPC
