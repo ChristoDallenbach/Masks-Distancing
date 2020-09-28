@@ -38,9 +38,9 @@ public class Groceries : MonoBehaviour
 
         }
         //put in bag
-        if (other.name == "Bag")
+        if (other.name == "Bag" && scanned == true)
         {
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
         }
 
     }
