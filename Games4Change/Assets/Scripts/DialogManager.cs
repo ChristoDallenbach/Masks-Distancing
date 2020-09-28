@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//this is a test
+
 public class DialogManager : MonoBehaviour
 {
     public TextMeshProUGUI NPCtalking;
