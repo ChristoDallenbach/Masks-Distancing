@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NpcManager : MonoBehaviour
 {
@@ -87,6 +88,14 @@ public class NpcManager : MonoBehaviour
         if (numCustomerInADay == CustomerNum)
         {
             Days.day += 1;
+            if(Days.infected == true)
+            {
+                SceneManager.LoadScene(1);
+            }
+            if(Days.day >= 7)
+            {
+                SceneManager.LoadScene(1);
+            }
         }
     }
 
