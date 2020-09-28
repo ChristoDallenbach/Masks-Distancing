@@ -54,7 +54,7 @@ public class NpcManager : MonoBehaviour
     void Update()
     {
         customerTimer();
-        if (dialogScript.getSaidHello() == true)
+        if (dialogScript.DoneTalking == true)
         {
             tempTime += Time.deltaTime;
             if (tempTime > timeUntilC)
