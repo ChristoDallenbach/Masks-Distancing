@@ -37,6 +37,11 @@ public class Groceries : MonoBehaviour
             }
 
         }
+        //put in bag
+        if (other.name == "Bag")
+        {
+            Destroy(this.gameObject);
+        }
 
     }
 }
