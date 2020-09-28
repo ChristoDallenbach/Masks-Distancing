@@ -4,6 +4,7 @@ using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogManager : MonoBehaviour
 {
@@ -103,6 +104,15 @@ public class DialogManager : MonoBehaviour
         }
     }
 
+    private void amIInfected(int percent)
+    {
+        int num = (int)UnityEngine.Random.Range(1, 100); //makes a random number, if it is bellow the percent, you are infected
+        if(percent > num)
+        {
+            Days.infected = true;
+        }
+    }
+
     private void first()//this is the response if they are not wearing and you say nothing or they are wearing a mask and is not rude
     {
         saidHello = true;
@@ -110,11 +120,13 @@ public class DialogManager : MonoBehaviour
         {
             NPCtalking.text = "RWWWAAAAARRR AWFUL";
             playerScript.Mood = -1;
+            amIInfected(25);
         }
         else
         {
             NPCtalking.text = "Have a nice day";
             playerScript.Mood = 1;
+            amIInfected(1);
         }
         choice1.gameObject.SetActive(false);
         choice2.gameObject.SetActive(false);
@@ -129,11 +141,13 @@ public class DialogManager : MonoBehaviour
         {
             NPCtalking.text = "RWWWAAARRR NO";
             playerScript.Mood = -1;
+            amIInfected(25);
         }
         else
         {
             NPCtalking.text = "Sure";
             playerScript.Mood = 1;
+            amIInfected(10);
         }
         choice1.gameObject.SetActive(false);
         choice2.gameObject.SetActive(false);
