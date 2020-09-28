@@ -12,6 +12,8 @@ public class NpcManager : MonoBehaviour
     private float Timer = 0.0f;
     private float timeUntilC = 5.0f;
     private bool customerPresent;
+    private int numCustomerInADay;// the number of costemers the player will see through the entire day
+    private int CustomerNum;//the number of custemers the player has seen
     //these are npc stuff
     private int responsibility; //chances of wearing a mask
     private int kindness; //chances on being rude about puting the mask on
@@ -28,6 +30,12 @@ public class NpcManager : MonoBehaviour
         set { kindness = value; }
     }
 
+    public int NumCustomerInADay
+    {
+        get { return numCustomerInADay; }
+        set { numCustomerInADay = Days.day + numCustomerInADay; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +43,8 @@ public class NpcManager : MonoBehaviour
         customerPresent = false;
         Responsibility = 0;
         Kindness = 0;
+        numCustomerInADay = 4;
+        CustomerNum = 0;
     }
 
     // Update is called once per frame
@@ -74,10 +84,15 @@ public class NpcManager : MonoBehaviour
         customerPresent = false;
         Timer = 0f;
         Destroy(customerClone);
+        if(numCustomerInADay == CustomerNum)
+        {
+            Days.day += 1;
+        }
     }
 
     private void SpawnCustomer()
     {
-        customerClone = Instantiate(customer, new Vector3(0, 0, 0), Quaternion.identity);
+        CustomerNum++;
+        customerClone = Instantiate(customer, new Vector3(-1.4f, .62f, 0f), Quaternion.identity);
     }
 }
