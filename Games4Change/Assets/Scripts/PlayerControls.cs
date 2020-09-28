@@ -84,6 +84,6 @@ public class PlayerControls : MonoBehaviour
     public void UpdateUI() 
     {
         moodImage.sprite = moodImages[(int)happiness];
-        displayMood.text = "Mood: " + mood + " " + happiness;
+        displayMood.text = "Mood: " + Mood + " " + happiness;
     }
 }
