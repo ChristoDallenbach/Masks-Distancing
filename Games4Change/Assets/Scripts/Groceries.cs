@@ -31,16 +31,13 @@ public class Groceries : MonoBehaviour
     {
         scanned = true;
         gameObject.GetComponent<Image>().enabled = false;
-
+        startPosition = GetComponent<RectTransform>().anchoredPosition3D;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (startPosition == null)
-        {
-            startPosition = gameObject.transform.position;
-        }
+   
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -63,7 +60,7 @@ public class Groceries : MonoBehaviour
         if (other.name == "Bag" && scanned == true && gameObject.GetComponent<Image>().enabled == true)
         {
             gameObject.GetComponent<Image>().enabled = false;
-            gameObject.transform.position = startPosition;
+            GetComponent<RectTransform>().anchoredPosition3D = startPosition;
         }
 
     }

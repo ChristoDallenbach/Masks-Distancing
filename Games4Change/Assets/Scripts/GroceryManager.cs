@@ -52,6 +52,11 @@ public class GroceryManager : MonoBehaviour
         {
             int i = 0;
 
+            foreach(Groceries grocery in groceries)
+            {
+                grocery.GetComponent<RectTransform>().anchoredPosition3D = grocery.StartPosition;
+            }
+
             // loop through and pick 4 different items for scanning
             while (i < 4)
             {
