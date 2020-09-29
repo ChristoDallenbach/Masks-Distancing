@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1858
     height: 1037
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1858
     height: 987
-  m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 99
+  controlID: 121
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 100
+  controlID: 28
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 101
+  controlID: 29
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,21 +343,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Sprites
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Sprites
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Mira\Desktop\Masks-Distancing\Games4Change
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ea3f0000
-    m_LastClickedID: 16362
-    m_ExpandedIDs: 00000000e03f0000ee3f000000ca9a3b
+    m_SelectedIDs: 3e3d0000
+    m_LastClickedID: 15678
+    m_ExpandedIDs: 00000000303d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -385,7 +385,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e03f0000
+    m_ExpandedIDs: 00000000303d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -507,20 +507,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c2520000
-      m_LastClickedID: 21186
-      m_ExpandedIDs: bae3ffff6ee4ffffeef1ffffe4f9ffff5afbffff264000009a520000
+      m_SelectedIDs: 7c3f0000
+      m_LastClickedID: 16252
+      m_ExpandedIDs: 80faffff96faffffaefaffff3afbffff5a3e0000543f0000663f0000723f000020400000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Instructions
-        m_OriginalName: Instructions
+        m_Name: StaticObjects
+        m_OriginalName: StaticObjects
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -2998
+        m_UserData: 16416
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -569,9 +569,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.99446213, y: 0.72630525, z: 61.215767}
+    m_Target: {x: 0.913783, y: 0.75269824, z: 59.55449}
     speed: 2
-    m_Value: {x: 0.99446213, y: 0.72630525, z: 61.215767}
+    m_Value: {x: 0.913783, y: 0.75269824, z: 59.55449}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -622,9 +622,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.5009766
+    m_Target: 7.8588433
     speed: 2
-    m_Value: 7.5009766
+    m_Value: 7.8588433
   m_Ortho:
     m_Target: 1
     speed: 2
