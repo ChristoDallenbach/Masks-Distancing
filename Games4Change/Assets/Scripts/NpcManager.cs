@@ -17,10 +17,13 @@ public class NpcManager : MonoBehaviour
     private float Timer = 0.0f;
     private float timeUntilC = 5.0f;
     private bool customerPresent;
+    private bool groceriesBagged;
+    private bool spawnGroceries;
     //these are npc stuff
     private int responsibility; //chances of wearing a mask
     private int kindness; //chances on being rude about puting the mask on
 
+    // Getters and Setters for variables
     public int Responsibility
     {
         get { return responsibility; }
@@ -39,6 +42,18 @@ public class NpcManager : MonoBehaviour
         set { numCustomerInADay = Days.day + numCustomerInADay; }
     }
 
+    public bool GroceriesBagged
+    {
+        get { return groceriesBagged; }
+        set { groceriesBagged = value; }
+    }
+
+    public bool SpawnGroceries
+    {
+        get { return spawnGroceries; }
+        set { spawnGroceries = value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +69,7 @@ public class NpcManager : MonoBehaviour
     void Update()
     {
         customerTimer();
-        if (dialogScript.getSaidHello() == true)
+        if (dialogScript.DoneTalking == true && groceriesBagged)
         {
             tempTime += Time.deltaTime;
             if (tempTime > timeUntilC)
@@ -65,6 +80,7 @@ public class NpcManager : MonoBehaviour
         }
     }
 
+    // Timer to check if the new customer should be there yet
     void customerTimer()
     {
         Timer += Time.deltaTime;
@@ -74,14 +90,17 @@ public class NpcManager : MonoBehaviour
             Responsibility = (int)UnityEngine.Random.Range(0, 5);
             Kindness = (int)UnityEngine.Random.Range(0, 5);
             SpawnCustomer();
+            spawnGroceries = true;
         }
     }
 
+    // getter for current customer
     public bool getCustomer()
     {
         return customerPresent;
     }
 
+    // method for making the customer leave
     public void setCustomerleave()
     {
         customerPresent = false;
@@ -90,17 +109,18 @@ public class NpcManager : MonoBehaviour
         if (numCustomerInADay == CustomerNum)
         {
             Days.day += 1;
-            if(Days.infected == true)
+            if (Days.infected == true)
             {
                 SceneManager.LoadScene(1);
             }
-            if(Days.day >= 7)
+            if (Days.day >= 7)
             {
                 SceneManager.LoadScene(1);
             }
         }
     }
 
+    // method for spawning a new customer
     private void SpawnCustomer()
     {
         CustomerNum++;
