@@ -9,6 +9,7 @@ public class EndGameStuff : MonoBehaviour
 {
     public TextMeshProUGUI result;
     public Button backToMenu;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +17,7 @@ public class EndGameStuff : MonoBehaviour
         {
             result.text = "You got infected.";
         }
-        else if(Days.infected == false && Days.day < 7)
+        else if(Days.day < 7)
         {
             result.text = "Your mental health got too low.";
         }
@@ -28,6 +29,11 @@ public class EndGameStuff : MonoBehaviour
 
     public void goBackToMain()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

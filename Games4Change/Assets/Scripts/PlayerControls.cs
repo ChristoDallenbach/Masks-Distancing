@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 enum E_Mood { Happy = 0, Neutral = 1, Unhappy = 2, Angry = 3}
 
@@ -30,6 +31,7 @@ public class PlayerControls : MonoBehaviour
             if (mood < 0)
             {
                 mood = 0;
+                SceneManager.LoadScene(2);
             }
 
             if (mood > 8)

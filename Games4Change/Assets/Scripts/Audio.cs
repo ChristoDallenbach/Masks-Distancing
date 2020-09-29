@@ -77,6 +77,7 @@ public class Audio : MonoBehaviour
 
         }
         music.volume = volumeSlider.value;
+        sadMusic.volume = volumeSlider.value;
     }
 
 

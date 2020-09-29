@@ -21,6 +21,12 @@ public class DragDrop : MonoBehaviour
             if (draggingItem)
                 DropItem();
         }
+
+
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            Application.Quit();
+        }
     }
 
     Vector2 CurrentTouchPosition

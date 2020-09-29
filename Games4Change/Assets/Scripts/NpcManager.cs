@@ -111,11 +111,11 @@ public class NpcManager : MonoBehaviour
             Days.day += 1;
             if (Days.infected == true)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
             if (Days.day >= 7)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
             }
         }
     }
