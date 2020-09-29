@@ -31,16 +31,7 @@ public class PlayerControls : MonoBehaviour
             {
                 mood = 0;
             }
-            UpdateUI();
-        }
-    }
 
-
-    private E_Mood Happiness
-    {
-        get { return happiness; }
-        set
-        {
             if (mood > 8)
             {
                 happiness = E_Mood.Happy;
@@ -58,6 +49,16 @@ public class PlayerControls : MonoBehaviour
                 happiness = E_Mood.Angry;
             }
             UpdateUI();
+        }
+    }
+
+
+    private E_Mood Happiness
+    {
+        get { return happiness; }
+        set
+        {
+            happiness = value;
         }
     }
 

@@ -55,7 +55,7 @@ public class Audio : MonoBehaviour
             volumeImage.sprite = volumeImages[2];
 
         }
-        music.volume = Mathf.Log10(volumeSlider.value * 20);
+        music.volume = volumeSlider.value;
     }
 
 
@@ -78,7 +78,7 @@ public class Audio : MonoBehaviour
             soundImage.sprite = soundImages[2];
 
         }
-        sfx.volume = Mathf.Log10(soundSlider.value * 20);
+        sfx.volume = soundSlider.value;
     }
 
 
