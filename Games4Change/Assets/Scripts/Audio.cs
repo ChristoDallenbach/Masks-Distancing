@@ -69,7 +69,7 @@ public class Audio : MonoBehaviour
         {
             soundImage.sprite = soundImages[0];
         }
-        else if (soundSlider.value > .2f)
+        else if (soundSlider.value > .5f)
         {
             soundImage.sprite = soundImages[1];
         }
