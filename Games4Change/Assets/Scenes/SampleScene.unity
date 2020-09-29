@@ -662,8 +662,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -95.9, y: -37}
-  m_SizeDelta: {x: 209.88196, y: 50}
+  m_AnchoredPosition: {x: -180.73, y: -32.72}
+  m_SizeDelta: {x: 361.36914, y: 51.63835}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &279655004
 MonoBehaviour:
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -6.3817425, z: 0, w: 6.38173}
+  m_margin: {x: 1.1268004, y: -0.49609566, z: 0.85470587, w: 1.1878852}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2957,7 +2957,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Instructions
+  m_text: 'Slide groceries over the scanner to scan.
+
+    Put them in the bags.
+
+    Survive
+    7 days without getting infected or becoming too mad.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3850,7 +3855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -126.350006, y: -56.83}
+  m_AnchoredPosition: {x: -126.350006, y: -56.830017}
   m_SizeDelta: {x: 210.68518, y: 65.65051}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1623568541
@@ -4953,10 +4958,10 @@ RectTransform:
   m_Father: {fileID: 1595058574}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -399, y: 25.4}
-  m_SizeDelta: {x: 230.55112, y: 50.82522}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -405.7, y: -7.6000004}
+  m_SizeDelta: {x: 365.8472, y: 50.82522}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1902679800
 MonoBehaviour:
