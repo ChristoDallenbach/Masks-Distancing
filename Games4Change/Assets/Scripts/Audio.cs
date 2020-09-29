@@ -19,7 +19,12 @@ public class Audio : MonoBehaviour
     private Sprite[] soundImages;
 
     [SerializeField]
+    private PlayerControls playerControls;
+
+    [SerializeField]
     private AudioSource music;
+    [SerializeField]
+    private AudioSource sadMusic;
     [SerializeField]
     private AudioSource sfx;
 
@@ -33,6 +38,22 @@ public class Audio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerControls.Mood > 6)
+        {
+            if (!music.isPlaying)
+            {
+                sadMusic.Stop();
+                music.Play();
+            }
+        }
+        else 
+        {
+            if (!sadMusic.isPlaying) 
+            {
+                music.Stop();
+                sadMusic.Play();
+            }
+        }
         
     }
 
@@ -76,7 +97,6 @@ public class Audio : MonoBehaviour
         else
         {
             soundImage.sprite = soundImages[2];
-
         }
         sfx.volume = soundSlider.value;
     }
