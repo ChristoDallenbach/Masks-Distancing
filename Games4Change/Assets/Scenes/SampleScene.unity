@@ -2192,7 +2192,14 @@ MonoBehaviour:
   - {fileID: 1737059418}
   - {fileID: 1819222271}
   - {fileID: 1938991207}
-  money: []
+  money:
+  - {fileID: 224231682}
+  - {fileID: 1664598910}
+  - {fileID: 1474628994}
+  - {fileID: 821534827}
+  - {fileID: 615821454}
+  - {fileID: 712588274}
+  - {fileID: 2084179069}
 --- !u!1 &712588271
 GameObject:
   m_ObjectHideFlags: 0
