@@ -7,14 +7,18 @@ public class GroceryManager : MonoBehaviour
 {
     // array for the grocery list
     [SerializeField] Groceries[] groceries;
+    // array for the money
+    [SerializeField] Money[] money;
     private bool allClear;
     private NpcManager npcManager;
+    //ensures money doesn't spawn upon the start and money goes in the register properly
+    private bool canSpawnMoney;
 
     // Start is called before the first frame update
     void Start()
     {
         npcManager = GameObject.Find("GameManager").GetComponentInChildren<NpcManager>();
-
+        canSpawnMoney = false;
         NewCustomerScan();
     }
 
@@ -39,9 +43,21 @@ public class GroceryManager : MonoBehaviour
         // if all the groceries are bagged then go next
         if (allClear == true)
         {
+            if (canSpawnMoney)
+            {
+                foreach (Money cash in money)
+                {
+                    cash.SpawnMoney();
+                }
+                canSpawnMoney = false;
+            }
             npcManager.GroceriesBagged = true;
-
-            NewCustomerScan();
+            //groceries appear once previous wave's money is put in
+            //the only way to actually get that to work was to hardcode it
+            if (money[0].InRegister && money[1].InRegister && money[2].InRegister)
+            {
+                NewCustomerScan();
+            }
         }
     }
 
@@ -75,6 +91,9 @@ public class GroceryManager : MonoBehaviour
             allClear = false;
             npcManager.GroceriesBagged = false;
             npcManager.SpawnGroceries = false;
+
+            //allow money to spawn when groceies are clear after the 1st wave of groceries spawn
+            canSpawnMoney = true;
         }
     }
 }

@@ -49,7 +49,7 @@ public class DragDrop : MonoBehaviour
             if (draggedObject != null)
             {
                 //don't want scanner and the register to be draggable
-                if (draggedObject.name != "Scanner" && draggedObject.name != "Register" && draggedObject.name != "Bag")
+                if (draggedObject.name != "Scanner" && draggedObject.name != "CashRegister" && draggedObject.name != "Bag")
                 {
                     draggedObject.transform.position = inputPosition + touchOffset;
                 }
