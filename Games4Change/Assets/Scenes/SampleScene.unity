@@ -2192,6 +2192,7 @@ MonoBehaviour:
   - {fileID: 1737059418}
   - {fileID: 1819222271}
   - {fileID: 1938991207}
+  money: []
 --- !u!1 &712588271
 GameObject:
   m_ObjectHideFlags: 0
@@ -5825,7 +5826,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f588bc6b17814b044a6a7e37612e484b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 242bf125d02ebd04293f29e08d79476a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
