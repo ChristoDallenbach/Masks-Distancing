@@ -54,7 +54,9 @@ public class GroceryManager : MonoBehaviour
             npcManager.GroceriesBagged = true;
             //groceries appear once previous wave's money is put in
             //the only way to actually get that to work was to hardcode it
-            if (money[0].InRegister && money[1].InRegister && money[2].InRegister)
+            if (money[0].InRegister && money[1].InRegister && money[2].InRegister&& 
+                money[3].InRegister && money[4].InRegister && money[5].InRegister&&
+                money[6].InRegister)
             {
                 NewCustomerScan();
             }
