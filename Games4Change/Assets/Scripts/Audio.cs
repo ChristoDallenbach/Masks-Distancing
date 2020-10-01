@@ -26,6 +26,8 @@ public class Audio : MonoBehaviour
     [SerializeField]
     private AudioSource sadMusic;
     [SerializeField]
+    private AudioSource neutralMusic;
+    [SerializeField]
     private AudioSource sfx;
 
     // Start is called before the first frame update
@@ -38,19 +40,27 @@ public class Audio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerControls.Mood > 6)
+        if (playerControls.Mood > 7)
         {
             if (!music.isPlaying)
             {
                 sadMusic.Stop();
+                neutralMusic.Stop();
                 music.Play();
             }
         }
-        else 
+        else if (playerControls.Mood > 4) 
         {
-            if (!sadMusic.isPlaying) 
+            sadMusic.Stop();
+            music.Stop();
+            neutralMusic.Play();
+        }
+        else
+        {
+            if (!sadMusic.isPlaying)
             {
                 music.Stop();
+                neutralMusic.Stop();
                 sadMusic.Play();
             }
         }
