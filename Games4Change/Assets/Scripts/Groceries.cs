@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Groceries : MonoBehaviour
 {
     private bool scanned;
+    private bool bagged;
     [SerializeField]
     private AudioSource soundManager;
     [SerializeField]
@@ -21,6 +22,12 @@ public class Groceries : MonoBehaviour
         set { scanned = value; }
     }
 
+    public bool Bagged 
+    { 
+        get { return bagged; }
+        set { bagged = value; }
+    }
+
     public Vector3 StartPosition
     {
         get { return startPosition; }
@@ -30,6 +37,7 @@ public class Groceries : MonoBehaviour
     void Start()
     {
         scanned = true;
+        bagged = true;
         gameObject.GetComponent<Image>().enabled = false;
         startPosition = GetComponent<RectTransform>().anchoredPosition3D;
     }
@@ -59,6 +67,7 @@ public class Groceries : MonoBehaviour
         //put in bag
         if (other.name == "Bag" && scanned == true && gameObject.GetComponent<Image>().enabled == true)
         {
+            bagged = true;
             gameObject.GetComponent<Image>().enabled = false;
             GetComponent<RectTransform>().anchoredPosition3D = startPosition;
         }

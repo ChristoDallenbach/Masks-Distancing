@@ -29,7 +29,7 @@ public class GroceryManager : MonoBehaviour
         // check when the groceries is gone
         foreach (Groceries grocery in groceries)
         {
-            if (grocery.Scanned == true)
+            if (grocery.Bagged == true)
             {
                 check++;
             }
@@ -84,6 +84,7 @@ public class GroceryManager : MonoBehaviour
                 if (groceries[randomNum].Scanned != false)
                 {
                     groceries[randomNum].Scanned = false;
+                    groceries[randomNum].Bagged = false;
                     groceries[randomNum].GetComponent<Image>().enabled = true;
                     i++;
                 }
