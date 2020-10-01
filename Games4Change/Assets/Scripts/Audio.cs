@@ -51,9 +51,12 @@ public class Audio : MonoBehaviour
         }
         else if (playerControls.Mood > 4) 
         {
-            sadMusic.Stop();
-            music.Stop();
-            neutralMusic.Play();
+            if (!neutralMusic.isPlaying)
+            {
+                music.Stop();
+                neutralMusic.Play();
+                sadMusic.Stop();
+            }
         }
         else
         {
@@ -88,6 +91,7 @@ public class Audio : MonoBehaviour
         }
         music.volume = volumeSlider.value;
         sadMusic.volume = volumeSlider.value;
+        neutralMusic.volume = volumeSlider.value;
     }
 
 
