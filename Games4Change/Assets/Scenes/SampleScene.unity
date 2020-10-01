@@ -703,7 +703,6 @@ GameObject:
   - component: {fileID: 224231675}
   - component: {fileID: 224231681}
   - component: {fileID: 224231680}
-  - component: {fileID: 224231679}
   - component: {fileID: 224231678}
   - component: {fileID: 224231677}
   - component: {fileID: 224231676}
@@ -794,20 +793,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d7089d2d2850f4589090e295d08248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &224231679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 224231674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10de4a56791d99943b60aa1b3d343b49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundManager: {fileID: 951164913}
-  beepSound: {fileID: 8300000, guid: f3e2917b08758184290aa6169747b79d, type: 3}
 --- !u!114 &224231680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2117,7 +2102,6 @@ GameObject:
   - component: {fileID: 615821447}
   - component: {fileID: 615821453}
   - component: {fileID: 615821452}
-  - component: {fileID: 615821451}
   - component: {fileID: 615821450}
   - component: {fileID: 615821449}
   - component: {fileID: 615821448}
@@ -2208,20 +2192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d7089d2d2850f4589090e295d08248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &615821451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615821446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10de4a56791d99943b60aa1b3d343b49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundManager: {fileID: 951164913}
-  beepSound: {fileID: 8300000, guid: f3e2917b08758184290aa6169747b79d, type: 3}
 --- !u!114 &615821452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2430,7 +2400,6 @@ GameObject:
   - component: {fileID: 712588272}
   - component: {fileID: 712588280}
   - component: {fileID: 712588279}
-  - component: {fileID: 712588278}
   - component: {fileID: 712588277}
   - component: {fileID: 712588276}
   - component: {fileID: 712588275}
@@ -2545,20 +2514,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d7089d2d2850f4589090e295d08248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &712588278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 712588271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10de4a56791d99943b60aa1b3d343b49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundManager: {fileID: 951164913}
-  beepSound: {fileID: 8300000, guid: f3e2917b08758184290aa6169747b79d, type: 3}
 --- !u!114 &712588279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2697,7 +2652,6 @@ GameObject:
   - component: {fileID: 821534820}
   - component: {fileID: 821534826}
   - component: {fileID: 821534825}
-  - component: {fileID: 821534824}
   - component: {fileID: 821534823}
   - component: {fileID: 821534822}
   - component: {fileID: 821534821}
@@ -2788,20 +2742,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d7089d2d2850f4589090e295d08248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &821534824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821534819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10de4a56791d99943b60aa1b3d343b49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundManager: {fileID: 951164913}
-  beepSound: {fileID: 8300000, guid: f3e2917b08758184290aa6169747b79d, type: 3}
 --- !u!114 &821534825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4598,7 +4538,6 @@ GameObject:
   - component: {fileID: 1474628987}
   - component: {fileID: 1474628993}
   - component: {fileID: 1474628992}
-  - component: {fileID: 1474628991}
   - component: {fileID: 1474628990}
   - component: {fileID: 1474628989}
   - component: {fileID: 1474628988}
@@ -4689,20 +4628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d7089d2d2850f4589090e295d08248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1474628991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474628986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10de4a56791d99943b60aa1b3d343b49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundManager: {fileID: 951164913}
-  beepSound: {fileID: 8300000, guid: f3e2917b08758184290aa6169747b79d, type: 3}
 --- !u!114 &1474628992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5369,7 +5294,6 @@ GameObject:
   - component: {fileID: 1664598903}
   - component: {fileID: 1664598909}
   - component: {fileID: 1664598908}
-  - component: {fileID: 1664598907}
   - component: {fileID: 1664598906}
   - component: {fileID: 1664598905}
   - component: {fileID: 1664598904}
@@ -5460,20 +5384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d7089d2d2850f4589090e295d08248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1664598907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1664598902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10de4a56791d99943b60aa1b3d343b49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundManager: {fileID: 951164913}
-  beepSound: {fileID: 8300000, guid: f3e2917b08758184290aa6169747b79d, type: 3}
 --- !u!114 &1664598908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7315,7 +7225,6 @@ GameObject:
   - component: {fileID: 2084179067}
   - component: {fileID: 2084179075}
   - component: {fileID: 2084179074}
-  - component: {fileID: 2084179073}
   - component: {fileID: 2084179072}
   - component: {fileID: 2084179071}
   - component: {fileID: 2084179070}
@@ -7430,20 +7339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58d7089d2d2850f4589090e295d08248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2084179073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084179066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10de4a56791d99943b60aa1b3d343b49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundManager: {fileID: 951164913}
-  beepSound: {fileID: 8300000, guid: f3e2917b08758184290aa6169747b79d, type: 3}
 --- !u!114 &2084179074
 MonoBehaviour:
   m_ObjectHideFlags: 0
